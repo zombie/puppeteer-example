@@ -16,7 +16,7 @@ const puppeteer = require('puppeteer');
       '--disable-setuid-sandbox',
       '--no-sandbox',
     ],
-    headless: false,
+    // headless: false,
   });
   const page = await browser.newPage();
   await page.goto('https://github.com/zombie/blind-reviews/pull/1');
