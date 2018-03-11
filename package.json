@@ -3,6 +3,6 @@
     "test": "node script.js"
   },
   "dependencies": {
-    "puppeteer": "^1.0.0"
+    "puppeteer": "^0.9.0"
   }
 }
