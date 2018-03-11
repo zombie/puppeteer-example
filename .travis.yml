@@ -6,12 +6,12 @@ language: node_js
 node_js:
 - '8'
 
-before_script:
-- git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-- git fetch origin
-- git checkout $TRAVIS_BRANCH || git checkout -b $TRAVIS_BRANCH
+# node_js: node
 
-script:
-- yarn
-- yarn test
-- [ "$TRAVIS_EVENT_TYPE" == "push" ] && yarn run reg
+addons:
+  chrome: stable
+
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
