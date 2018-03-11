@@ -1,9 +1,0 @@
-box: node:8
-
-build:
-  steps:
-    - script:
-        name: Workaround for GoogleChrome/puppeteer#290
-        code: sh ./fix_290.sh
-    - npm-install
-    - npm-test
